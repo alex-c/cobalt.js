@@ -1,7 +1,7 @@
 var test = require('tape');
 
 var Lexer = require('../../lexer');
-var {SyntaxError} = require('../../errors');
+var {CobaltSyntaxError} = require('../../errors');
 
 var testIdentifiers = test('Lexer.tokenize: identifiers', function(assert) {
 
@@ -34,19 +34,19 @@ var testIdentifiers = test('Lexer.tokenize: identifiers', function(assert) {
     fn = function() {
         Lexer.tokenize('1var ');
     };
-    assert.throws(fn, SyntaxError, "Identifier: cannot start with number");
+    assert.throws(fn, CobaltSyntaxError, "Identifier: cannot start with number");
 
     //Case: identifiers can't start with underlines
     fn = function() {
         Lexer.tokenize('_1var ');
     };
-    assert.throws(fn, SyntaxError, "Identifier: cannot start with underline");
+    assert.throws(fn, CobaltSyntaxError, "Identifier: cannot start with underline");
 
     //Case: forbiden char
     fn = function() {
         Lexer.tokenize('var%t ');
     };
-    assert.throws(fn, SyntaxError, "Identifier: forbidden char");
+    assert.throws(fn, CobaltSyntaxError, "Identifier: forbidden char");
 
     assert.end();
 

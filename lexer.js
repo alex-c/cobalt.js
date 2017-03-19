@@ -1,4 +1,4 @@
-var {CompilerError, SyntaxError} = require('./errors');
+var {CompilerError, CobaltSyntaxError} = require('./errors');
 
 /**
 *   A lexer for the Cobalt programming language.
@@ -13,7 +13,7 @@ function Lexer() {
     *
     *   @param {String} code    String of Cobalt code.
     *   @return {Array}         Token list.
-    *   @throws {SyntaxError}
+    *   @throws {CobaltSyntaxError}
     */
     this.tokenize = function(code) {
 
@@ -102,18 +102,18 @@ function Lexer() {
                         if(word.indexOf('.') == -1) {
                             tokens.push({type: 'literal', subtype: 'int', value: word, line: line});
                         } else {
-                            throw new SyntaxError(line, "Unexpected dot (.). Note that this version of Cobalt does not support floating point numbers.");
+                            throw new CobaltSyntaxError(line, "Unexpected dot (.). Note that this version of Cobalt does not support floating point numbers.");
                         }
                     } else {
                         if(validIdentifier(word)) {
                             tokens.push({type: 'identifier', value: word, line: line});
                         } else {
-                            throw new SyntaxError(line, "Invalid syntax. Expected identifier.");
+                            throw new CobaltSyntaxError(line, "Invalid syntax. Expected identifier.");
                         }
                     }
                     position += word.length;
                 } else {
-                    throw new SyntaxError(line, "Unable to find word end. Check wether you are missing a semicolon (;).");
+                    throw new CobaltSyntaxError(line, "Unable to find word end. Check wether you are missing a semicolon (;).");
                 }
             }
         }

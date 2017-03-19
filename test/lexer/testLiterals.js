@@ -1,7 +1,7 @@
 var test = require('tape');
 
 var Lexer = require('../../lexer');
-var {SyntaxError} = require('../../errors');
+var {CobaltSyntaxError} = require('../../errors');
 
 var testLiterals = test('Lexer.tokenize: literals', function(assert) {
 
@@ -27,7 +27,7 @@ var testLiterals = test('Lexer.tokenize: literals', function(assert) {
     fn = function() {
         Lexer.tokenize('12.3 ');
     };
-    assert.throws(fn, SyntaxError, "Literals: non-valid int literal");
+    assert.throws(fn, CobaltSyntaxError, "Literals: non-valid int literal");
 
     assert.end();
 
