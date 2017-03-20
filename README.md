@@ -1,13 +1,11 @@
 ## Introduction
-Cobalt.js is a Cobalt-to-JavaScript transpiler for the Cobalt programming language.
+Cobalt.js is a Cobalt-to-JavaScript transpiler for the [Cobalt programming language](https://alex-c.github.io/cobalt-specification).
 
 #### About Cobalt
 Cobalt is a statically and strongly typed programming language, that uses type inference. It is a programming language I created purely for learning purposes. I do not claim, that it is good or useful in any respect, nor that it solves any problems which other languages don't. Cobalt is an experiment, with the main goal of writing a compiler for it.
 
-Cobalt is work in progress. The current language version is *0.1*, and you can find the language specification [here](https://www.alec-c.github.io/cobalt-specification).
-
 ## Installation
-To use cobalt.js, manually add the files from this repository to your project, or install it via NPM:
+To add cobalt.js to your project, install it via NPM:
 
     $ npm install cobalt.js --save
 
@@ -17,7 +15,6 @@ To use cobalt.js, require the cobalt.js script, which will export an instance of
 String js(String cobalt_code)
 ```
 method to generate JavaScript code:
-
 ```javascript
     var cobalt = require('cobalt.js');
     var jscode = cobalt.js('def x:int = 3;print x;');
@@ -29,7 +26,7 @@ method to generate JavaScript code:
 ```
 
 ## Project status
-Cobalt.js is work in progress! Current implementation status for Cobalt 0.1 (see [Cobalt 0.1 Language Specification](https://www.alec-c.github.io/cobalt-specification)):
+Cobalt.js is work in progress! Current implementation status for Cobalt 0.1 (see [Cobalt Language Specification](https://alex-c.github.io/cobalt-specification)):
 
 - [x] Lexer
 - [ ] Parser
