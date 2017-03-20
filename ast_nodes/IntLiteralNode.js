@@ -9,7 +9,7 @@ var LiteralNode = require('./LiteralNode');
 */
 function IntLiteralNode(line, value) {
 
-    ASTNode.call(this, line, "IntLiteral");
+    LiteralNode.call(this, line, "IntLiteral");
 
     /** The integer value. */
     this.value = value;

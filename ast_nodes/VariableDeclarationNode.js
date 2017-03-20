@@ -101,15 +101,14 @@ VariableDeclarationNode.prototype.typeCheck = function() {
 *   @return {String} The info string.
 */
 VariableDeclarationNode.prototype.toString = function() {
-    var output = "(VariableDeclaration["+this.identifierNode.name;
+    var output = "VariableDeclaration["+this.identifierNode.name;
     if(this.typeNode) {
-        output += ":" + this.typeNode.getType();
+        output += ":" + this.typeNode.name;
     }
-    output += "]";
+    output += "]=";
     if(this.expressionNode) {
         output += this.expressionNode.toString();
     }
-    output += ")";
     return(output);
 };
 

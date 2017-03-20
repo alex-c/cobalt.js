@@ -1,14 +1,15 @@
 var ASTNode = require('./ASTNode');
 
 /**
-*   <p>Node representing an expression.</p>
+*   <p>Base object for expression nodes.</p>
 *
 *   @extends {ASTNode}
 *   @param {Number} line The line from which the corresponding code is.
+*   @param {String} type The expression type.
 */
-function ExpressionNode(line, name) {
+function ExpressionNode(line, type) {
 
-    ASTNode.call(this, line, "Expression");
+    ASTNode.call(this, line, type);
 
 };
 ExpressionNode.prototype = Object.create(ASTNode.prototype);

@@ -21,6 +21,8 @@ function CodeBlockNode(line) {
     this.symbolTable = [];//new SymbolTable();
 
 };
+CodeBlockNode.prototype = Object.create(ASTNode.prototype);
+CodeBlockNode.prototype.constructor = CodeBlockNode;
 
 /**
 *   <p>Adds a statement to the program node.</p>
@@ -36,8 +38,6 @@ CodeBlockNode.prototype.addStatement = function(node) {
         throw new CompilerError("Attempted to push something to code block statements that is not a statement node.", "CodeBlockNode", "addStatement");
     }
 };
-CodeBlockNode.prototype = Object.create(ASTNode.prototype);
-CodeBlockNode.prototype.constructor = CodeBlockNode;
 
 /*
 *   <p>Performs type checking.</p>
@@ -64,7 +64,7 @@ CodeBlockNode.prototype.toString = function() {
         }
     }
     output += "}";
-    return(otuput);
+    return(output);
 };
 
 module.exports = CodeBlockNode;

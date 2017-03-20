@@ -40,7 +40,7 @@ OutputNode.prototype.setExpression = function(node) {
 *   @return {String} The info string.
 */
 OutputNode.prototype.toString = function() {
-    return("(Output:"+this.expressionNode.toString()+")");
+    return("Output:"+this.expressionNode.toString());
 };
 
 module.exports = OutputNode;

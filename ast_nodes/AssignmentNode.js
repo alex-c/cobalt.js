@@ -59,7 +59,7 @@ AssignmentNode.prototype.setExpression = function(node) {
 *   @return {String} The info string.
 */
 AssignmentNode.prototype.toString = function() {
-    return("(Assignement:"+this.identifierNode.name+"="+this.expressionNode.toString()+")");
+    return("Assignement["+this.identifierNode.name+"]="+this.expressionNode.toString());
 };
 
 module.exports = AssignmentNode;

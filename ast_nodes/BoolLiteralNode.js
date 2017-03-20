@@ -9,7 +9,7 @@ var LiteralNode = require('./LiteralNode');
 */
 function BoolLiteralNode(line, value) {
 
-    ASTNode.call(this, line, "BoolLiteral");
+    LiteralNode.call(this, line, "BoolLiteral");
 
     /** The boolean value - either 'true' or 'false'. */
     this.value = value;
