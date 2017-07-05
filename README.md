@@ -29,7 +29,7 @@ method to generate JavaScript code:
 Cobalt.js is work in progress! Current implementation status for Cobalt 0.1 (see [Cobalt Language Specification](https://alex-c.github.io/cobalt-specification)):
 
 - [x] Lexer
-- [ ] Parser
+- [x] Parser
 - [ ] Semantic analysis
 - [ ] Optimization
 - [ ] Code generation
