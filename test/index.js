@@ -1,3 +1,4 @@
 var tests = {
-    lexerTests: require('./lexer')
+    lexerTests: require('./lexer'),
+    parserTests: require('./parser')
 }

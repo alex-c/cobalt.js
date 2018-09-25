@@ -1,0 +1,31 @@
+//Cobalt version 0.1
+//Prints out the 10 first Fibonacci numbers
+
+def x:int = 0;
+def y:int = 1;
+
+print x;
+print y;
+x := x+y;
+print x;
+x := x+y;
+y := x-y;
+print x;
+x := x+y;
+y := x-y;
+print x;
+x := x+y;
+y := x-y;
+print x;
+x := x+y;
+y := x-y;
+print x;
+x := x+y;
+y := x-y;
+print x;
+x := x+y;
+y := x-y;
+print x;
+x := x+y;
+y := x-y;
+print x;
